@@ -1,0 +1,133 @@
+# ► Recently Removed Sites
+
+<!-- search-exclude -->
+This page lists sites that were removed from the wiki in the last 30 days. This helps you find sites that may have gone down or were moved.
+
+> [!TIP]
+> For more information about why a site was removed, feel free to join our [Discord](https://github.com/fmhy/FMHY/wiki/FMHY-Discord).
+<!-- /search-exclude -->
+
+- Sirah <!-- search-exclude --> - AI-Powered Hadith Translation / Collections (Removed in [`d78238b`](https://github.com/fmhy/edit/commit/d78238bf82806cb59e6dcbf1f31c7d97a6ff4bc0))<!-- /search-exclude -->
+- KiraStreams <!-- search-exclude --> - Movies / TV / Anime (Removed in [`d78238b`](https://github.com/fmhy/edit/commit/d78238bf82806cb59e6dcbf1f31c7d97a6ff4bc0))<!-- /search-exclude -->
+- Wudooh <!-- search-exclude --> - Make Arabic Text Clearer (Removed in [`c4b50f8`](https://github.com/fmhy/edit/commit/c4b50f898683bf1911d0423c2812f5c1efd662ba))<!-- /search-exclude -->
+- Child Nutrition <!-- search-exclude --> - Child Nutrition / Cooking Course (Removed in [`fbf87e1`](https://github.com/fmhy/edit/commit/fbf87e16b9d955d6c1d6887f8590bfd1979436fb))<!-- /search-exclude -->
+- 🌐 **Evidence-Based Training Wiki** <!-- search-exclude --> - Evidence-Based Training Resources (Removed in [`867ae3a`](https://github.com/fmhy/edit/commit/867ae3a9af27a2c8156e0ba99a8a4ce8f197f267))<!-- /search-exclude -->
+- Start Bodyweight <!-- search-exclude --> - Bodyweight Training (Removed in [`867ae3a`](https://github.com/fmhy/edit/commit/867ae3a9af27a2c8156e0ba99a8a4ce8f197f267))<!-- /search-exclude -->
+- **555dy** <!-- search-exclude --> - Movies / TV / Anime / NSFW / Sub / 1080p (Removed in [`867ae3a`](https://github.com/fmhy/edit/commit/867ae3a9af27a2c8156e0ba99a8a4ce8f197f267))<!-- /search-exclude -->
+- FS02 <!-- search-exclude --> - Movies / TV / Anime (Removed in [`867ae3a`](https://github.com/fmhy/edit/commit/867ae3a9af27a2c8156e0ba99a8a4ce8f197f267))<!-- /search-exclude -->
+- fs6 <!-- search-exclude --> - Movies / TV / Anime (Removed in [`867ae3a`](https://github.com/fmhy/edit/commit/867ae3a9af27a2c8156e0ba99a8a4ce8f197f267))<!-- /search-exclude -->
+- Nym - Paid / 5-Hop Mixnet / Subreddit / GitHub <!-- search-exclude --> (Removed in [`887e64d`](https://github.com/fmhy/edit/commit/887e64de03b59155d985cb4725da1ddda1f00c96))<!-- /search-exclude -->
+- **PonTv** <!-- search-exclude --> - Movies / TV / Auto-Next (Removed in [`460460d`](https://github.com/fmhy/edit/commit/460460d0ed99b3144606bb832c17221d5624bd3c))<!-- /search-exclude -->
+- ⁠am-dl <!-- search-exclude --> - Apple Music / AAC-M4A / ALAC / Atmos (Removed in [`52b06d5`](https://github.com/fmhy/edit/commit/52b06d59e9b9d327a10b75525a3cba8b5bf88230))<!-- /search-exclude -->
+- CEFR Lookup <!-- search-exclude --> - CEFR Word Level Lookup (Removed in [`52b06d5`](https://github.com/fmhy/edit/commit/52b06d59e9b9d327a10b75525a3cba8b5bf88230))<!-- /search-exclude -->
+- anslayerweb <!-- search-exclude --> - Anime (Removed in [`52b06d5`](https://github.com/fmhy/edit/commit/52b06d59e9b9d327a10b75525a3cba8b5bf88230))<!-- /search-exclude -->
+- HourWolf <!-- search-exclude --> - Fantasy (Removed in [`52b06d5`](https://github.com/fmhy/edit/commit/52b06d59e9b9d327a10b75525a3cba8b5bf88230))<!-- /search-exclude -->
+- SpecialFeatureArchive <!-- search-exclude --> - DVD Extras / Special Features (Removed in [`52b06d5`](https://github.com/fmhy/edit/commit/52b06d59e9b9d327a10b75525a3cba8b5bf88230))<!-- /search-exclude -->
+- **Reddit Music Player** <!-- search-exclude --> - Subreddit Music Player (Removed in [`6b4187b`](https://github.com/fmhy/edit/commit/6b4187bcd336005b9355f6c6f9f86e9ade8539d4))<!-- /search-exclude -->
+- HerculesChess <!-- search-exclude --> - Learn / Practice Chess (Removed in [`6b4187b`](https://github.com/fmhy/edit/commit/6b4187bcd336005b9355f6c6f9f86e9ade8539d4))<!-- /search-exclude -->
+- 🌐 **Honkai.gg** <!-- search-exclude --> - Honkai Star Rail Resources / Tools (Removed in [`6b4187b`](https://github.com/fmhy/edit/commit/6b4187bcd336005b9355f6c6f9f86e9ade8539d4))<!-- /search-exclude -->
+- Face Shape AI or Face Shape Detectors <!-- search-exclude --> - Face Shape Detectors (Removed in [`6b4187b`](https://github.com/fmhy/edit/commit/6b4187bcd336005b9355f6c6f9f86e9ade8539d4))<!-- /search-exclude -->
+- Lit2Go <!-- search-exclude --> (Removed in [`6b4187b`](https://github.com/fmhy/edit/commit/6b4187bcd336005b9355f6c6f9f86e9ade8539d4))<!-- /search-exclude -->
+- ⁠StepFun <!-- search-exclude --> - Step 3.5 Flash / DeepSeek R1 (Removed in [`2ca3537`](https://github.com/fmhy/edit/commit/2ca3537c738159f51d84e97e4eb0f3ded27be351))<!-- /search-exclude -->
+- PokeGB <!-- search-exclude --> - Pokémon Blue Emulator (Removed in [`2ca3537`](https://github.com/fmhy/edit/commit/2ca3537c738159f51d84e97e4eb0f3ded27be351))<!-- /search-exclude -->
+- Perspective API <!-- search-exclude --> - Toxicity Reduction API (Removed in [`d244759`](https://github.com/fmhy/edit/commit/d244759c9b94756f2815006eeb3dae7877cfd031))<!-- /search-exclude -->
+- OpenHashTab <!-- search-exclude --> - Compare / Display File Hashes (Removed in [`050f115`](https://github.com/fmhy/edit/commit/050f115494ff67d77b23f06d654211f49799608b))<!-- /search-exclude -->
+- LDPlayer - Android Emulator / Debloat <!-- search-exclude --> (Removed in [`050f115`](https://github.com/fmhy/edit/commit/050f115494ff67d77b23f06d654211f49799608b))<!-- /search-exclude -->
+- Arete Codex <!-- search-exclude --> - Physical Health / Bodybuilding Guide (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Tellspecopedia <!-- search-exclude --> - Find Healthy Food (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Yuka <!-- search-exclude --> - Scan Ingredient Lists (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- ORAC Values <!-- search-exclude --> - ORAC Value Database / Information (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- The Freedom Model - Addiction-Help Model / Books / Lessons <!-- search-exclude --> (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- AniLab - Use DNS Adblock <!-- search-exclude --> (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Olive <!-- search-exclude --> - Video Editor (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Lightworks <!-- search-exclude --> - Video Editor (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Visla <!-- search-exclude --> - Video Editor (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Windows Movie Maker, 2, 3 <!-- search-exclude --> - Video Editor (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Avidemux <!-- search-exclude --> - Cut / Filter / Encode (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- Opus <!-- search-exclude --> - Clip Creator (Removed in [`fe8263e`](https://github.com/fmhy/edit/commit/fe8263e6528500d11a101ddc2de6942001b569ac))<!-- /search-exclude -->
+- ReactStudyKit <!-- search-exclude --> - React Study Tools / Flashcards (Removed in [`2fa0095`](https://github.com/fmhy/edit/commit/2fa00955987631659efbe31baedeedc99e03d236))<!-- /search-exclude -->
+- Warzone <!-- search-exclude --> - RISK Clone (Removed in [`2fa0095`](https://github.com/fmhy/edit/commit/2fa00955987631659efbe31baedeedc99e03d236))<!-- /search-exclude -->
+- **yFlix** or 1Movies - Movies / TV / Anime / Auto-Next / Clones <!-- search-exclude --> (Removed in [`bea8fa7`](https://github.com/fmhy/edit/commit/bea8fa79ad32e6eb44141afa988e0d7f2161a424))<!-- /search-exclude -->
+- A-Complete-UTAU-Tutorial-For-Beginners <!-- search-exclude --> - UTAU Tutorial (Removed in [`9188cf4`](https://github.com/fmhy/edit/commit/9188cf4cf2152d3f41350327a8de2205683df5b1))<!-- /search-exclude -->
+- ⁠Anixtv Music <!-- search-exclude --> - Browser Music (Removed in [`8e1e10b`](https://github.com/fmhy/edit/commit/8e1e10b8366215bc161fae59fd3598aaefe9aa70))<!-- /search-exclude -->
+- Reference Angle <!-- search-exclude --> - Human Photo Reference Search (Removed in [`6dcb296`](https://github.com/fmhy/edit/commit/6dcb296d6ea34875359923ef83d7b9aa0da6c789))<!-- /search-exclude -->
+- SanuFlix <!-- search-exclude --> - Movies / TV / Anime (Removed in [`6dcb296`](https://github.com/fmhy/edit/commit/6dcb296d6ea34875359923ef83d7b9aa0da6c789))<!-- /search-exclude -->
+- Awesome AI Tools <!-- search-exclude --> - AI Directory (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- Arduino <!-- search-exclude --> - Cloud IDE for Arduino (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- onflix <!-- search-exclude --> - Movies / TV / Anime (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- DocSach24 <!-- search-exclude --> - Books (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- BookArticlesBot <!-- search-exclude --> - Books / Telegram (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- Pulp <!-- search-exclude --> - Movies / TV / Anime (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- AnimeTosho <!-- search-exclude --> - Sub / Dub (Removed in [`2453f8d`](https://github.com/fmhy/edit/commit/2453f8df89e9825b3d70b0c3a458aa98ab89d774))<!-- /search-exclude -->
+- utako <!-- search-exclude --> - Live TV (Removed in [`00d50e6`](https://github.com/fmhy/edit/commit/00d50e62885f388bbef272dd060e0b204665984d): small fixes)<!-- /search-exclude -->
+- ⁠ProSearch13Bot <!-- search-exclude --> - Movies / TV (Removed in [`84f1d56`](https://github.com/fmhy/edit/commit/84f1d563dbdf7b4b4c8ed45d9948ab5fd5812c45): small fixes)<!-- /search-exclude -->
+- ProSearch4Bot <!-- search-exclude --> - Movies (Removed in [`84f1d56`](https://github.com/fmhy/edit/commit/84f1d563dbdf7b4b4c8ed45d9948ab5fd5812c45): small fixes)<!-- /search-exclude -->
+- ↪️ **Chemistry Lessons** <!-- search-exclude --> (Removed in [`7f9c504`](https://github.com/fmhy/edit/commit/7f9c504cd5dda65781bcfd181df0d0a0f4681b79))<!-- /search-exclude -->
+- ⁠Nerushare <!-- search-exclude --> - 5GB / Forever (Removed in [`7f9c504`](https://github.com/fmhy/edit/commit/7f9c504cd5dda65781bcfd181df0d0a0f4681b79))<!-- /search-exclude -->
+- PaywallBuster <!-- search-exclude --> - Paywall Bypass Tool (Removed in [`7f9c504`](https://github.com/fmhy/edit/commit/7f9c504cd5dda65781bcfd181df0d0a0f4681b79))<!-- /search-exclude -->
+- ViPER4Android <!-- search-exclude --> - Audio Modifier / Equalizer (Removed in [`7f9c504`](https://github.com/fmhy/edit/commit/7f9c504cd5dda65781bcfd181df0d0a0f4681b79))<!-- /search-exclude -->
+- Codux <!-- search-exclude --> - Visual IDE for React (Removed in [`248cd20`](https://github.com/fmhy/edit/commit/248cd209b776eecfd064ac52944eae18bd4837c4))<!-- /search-exclude -->
+- Superstrim <!-- search-exclude --> - Stream Aggregator (Removed in [`248cd20`](https://github.com/fmhy/edit/commit/248cd209b776eecfd064ac52944eae18bd4837c4))<!-- /search-exclude -->
+- Bollywood.eu <!-- search-exclude --> - Movies / Telegram (Removed in [`248cd20`](https://github.com/fmhy/edit/commit/248cd209b776eecfd064ac52944eae18bd4837c4))<!-- /search-exclude -->
+- MandoBot <!-- search-exclude --> - Mandarin Translation / Segmentation (Removed in [`05a1e07`](https://github.com/fmhy/edit/commit/05a1e07a7281570bed131ea675491aa4aaa44f5e): removed site)<!-- /search-exclude -->
+- okanime <!-- search-exclude --> - Anime / Sub / 1080p / Region Locked (Removed in [`9236163`](https://github.com/fmhy/edit/commit/92361637815afc235cb0f14cde5a48aa61b81b12))<!-- /search-exclude -->
+- DramaFire <!-- search-exclude --> - TV / Movies (Removed in [`9236163`](https://github.com/fmhy/edit/commit/92361637815afc235cb0f14cde5a48aa61b81b12))<!-- /search-exclude -->
+- Dramacool.sr <!-- search-exclude --> - TV / Movies (Removed in [`9236163`](https://github.com/fmhy/edit/commit/92361637815afc235cb0f14cde5a48aa61b81b12))<!-- /search-exclude -->
+- TNMOC <!-- search-exclude --> - National Museum of Computing Tour (Removed in [`d9213d2`](https://github.com/fmhy/edit/commit/d9213d2a9658e0a6c15f6254b1bea2b42b445250))<!-- /search-exclude -->
+- mood.gg <!-- search-exclude --> - LoL Character-Based Audio Playlists (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- OuterTune <!-- search-exclude --> (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- ⁠FastStream <!-- search-exclude --> - Fragmentation Streaming (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- Just Music <!-- search-exclude --> - Classical Music / MP3 (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- ModoCine <!-- search-exclude --> - Movies / TV (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- lmao.love <!-- search-exclude --> - TV / Sports (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- MyFootball <!-- search-exclude --> - Football (Removed in [`f982c89`](https://github.com/fmhy/edit/commit/f982c89a947622b9b7b4c3a123490f679ef67487))<!-- /search-exclude -->
+- Oculess <!-- search-exclude --> - Remove Oculus Quest Account Requirements & Telemetry (Removed in [`f8759b1`](https://github.com/fmhy/edit/commit/f8759b19d0645019f3c89babb438abbac89c9076))<!-- /search-exclude -->
+- Interplay <!-- search-exclude --> - Product Design Tool (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- Git.ir <!-- search-exclude --> - Courses (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- Humanoid Robots Wiki <!-- search-exclude --> - Robotics Courses Index (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- doable <!-- search-exclude --> - To-Do App with Sync / Extensions Support (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- elahmad <!-- search-exclude --> - Live TV (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- kinokong <!-- search-exclude --> - Movies / TV / Dub / 1080p (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- Gnula.nu <!-- search-exclude --> - Movies (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- miauscan <!-- search-exclude --> - Manga (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- **HocMai Forum** <!-- search-exclude --> - Study Forum (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- FreeEditorial / Spanish <!-- search-exclude --> (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- Freeditorial <!-- search-exclude --> (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- VetBooks <!-- search-exclude --> - Veterinary (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- X-Files <!-- search-exclude --> - Tech / Programming (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- Aleph <!-- search-exclude --> - Document Index Tool (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- ⁠IPDL <!-- search-exclude --> - Monitor Digital Library Torrent Health (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- KilatLIVE <!-- search-exclude --> - Football (Removed in [`4c54eb4`](https://github.com/fmhy/edit/commit/4c54eb4da6205c5ad9c72b2531cb4ef888838220))<!-- /search-exclude -->
+- RR.Topliste <!-- search-exclude --> - Piracy Site List (Removed in [`02e57a3`](https://github.com/fmhy/edit/commit/02e57a367481674d43eb0396c776626a5d64b8f6))<!-- /search-exclude -->
+- Tagify <!-- search-exclude --> - Create Tagged Playlists from Spotify Library (Removed in [`425143a`](https://github.com/fmhy/edit/commit/425143a9e823ca3cfa5153741e471ad6d30f20bc))<!-- /search-exclude -->
+- Hyperion <!-- search-exclude --> - YouTube Frontend (Removed in [`425143a`](https://github.com/fmhy/edit/commit/425143a9e823ca3cfa5153741e471ad6d30f20bc))<!-- /search-exclude -->
+- Mavi Manga <!-- search-exclude --> - Manga (Removed in [`425143a`](https://github.com/fmhy/edit/commit/425143a9e823ca3cfa5153741e471ad6d30f20bc))<!-- /search-exclude -->
+- NextFlick <!-- search-exclude --> - Random Trailers (Removed in [`425143a`](https://github.com/fmhy/edit/commit/425143a9e823ca3cfa5153741e471ad6d30f20bc))<!-- /search-exclude -->
+- Firebase <!-- search-exclude --> - Gemini AI Cloud Webapp (Removed in [`acd5136`](https://github.com/fmhy/edit/commit/acd51361c9cf57103282d3b1c5f47c469d97322e))<!-- /search-exclude -->
+- **Firebase** <!-- search-exclude --> - 10GB / 10GB (Removed in [`acd5136`](https://github.com/fmhy/edit/commit/acd51361c9cf57103282d3b1c5f47c469d97322e))<!-- /search-exclude -->
+- The Trove <!-- search-exclude --> - Books / Fantasy / TTRPG (Removed in [`fe79de5`](https://github.com/fmhy/edit/commit/fe79de58ca9045c7069e28c74263156453f6f259))<!-- /search-exclude -->
+- ⁠DXVK Studio <!-- search-exclude --> - DXVK Manager (Removed in [`167c64e`](https://github.com/fmhy/edit/commit/167c64ece41f7467081310ee94c74455a824593d))<!-- /search-exclude -->
+- Bollyflix <!-- search-exclude --> - Movies / TV / Anime (Removed in [`167c64e`](https://github.com/fmhy/edit/commit/167c64ece41f7467081310ee94c74455a824593d))<!-- /search-exclude -->
+- 9kmovies <!-- search-exclude --> - Movies / TV / 1080p (Removed in [`167c64e`](https://github.com/fmhy/edit/commit/167c64ece41f7467081310ee94c74455a824593d))<!-- /search-exclude -->
+- Hitomi Downloader <!-- search-exclude --> - Multi-Site / Software (Removed in [`167c64e`](https://github.com/fmhy/edit/commit/167c64ece41f7467081310ee94c74455a824593d))<!-- /search-exclude -->
+- KrakenFlix <!-- search-exclude --> - Movies / TV / Anime (Removed in [`40ce3be`](https://github.com/fmhy/edit/commit/40ce3be773d27d53f35d71c25fb6fd9fa18187ec))<!-- /search-exclude -->
+- RgShows <!-- search-exclude --> - TV / Sports (Removed in [`40ce3be`](https://github.com/fmhy/edit/commit/40ce3be773d27d53f35d71c25fb6fd9fa18187ec))<!-- /search-exclude -->
+- Better Discovery <!-- search-exclude --> - Game Discovery (Removed in [`aa668e1`](https://github.com/fmhy/edit/commit/aa668e1c92ace3b757e2b8e377026998a4ab2e01))<!-- /search-exclude -->
+- FossDroidAndroid <!-- search-exclude --> - FOSS Apps / Telegram (Removed in [`aa668e1`](https://github.com/fmhy/edit/commit/aa668e1c92ace3b757e2b8e377026998a4ab2e01))<!-- /search-exclude -->
+- AIO Stream Bot <!-- search-exclude --> - Spotify / Apple / Deezer / Qobuz / Tidal and more (Removed in [`99f24e0`](https://github.com/fmhy/edit/commit/99f24e099622651a44068da13d538b937c1ab7b0): small update)<!-- /search-exclude -->
+- Lurka <!-- search-exclude --> - Desktop Client (Removed in [`4f9f710`](https://github.com/fmhy/edit/commit/4f9f710c275feb505940c861478762cbbe7be1cb))<!-- /search-exclude -->
+- AniWatchTV <!-- search-exclude --> - Sub / Dub / Auto-Next (Removed in [`4f9f710`](https://github.com/fmhy/edit/commit/4f9f710c275feb505940c861478762cbbe7be1cb))<!-- /search-exclude -->
+- 🌐 **HiFi Tidal Instances** <!-- search-exclude --> - Tidal Instance List (Removed in [`2be3a4d`](https://github.com/fmhy/edit/commit/2be3a4df55256b89f0c51abc8e416b60b8606037))<!-- /search-exclude -->
+- **Soggfy** <!-- search-exclude --> - Spotify / 160kb Free / 320kb Premium / Use Older Versions (Removed in [`2be3a4d`](https://github.com/fmhy/edit/commit/2be3a4df55256b89f0c51abc8e416b60b8606037))<!-- /search-exclude -->
+- Steam Mover <!-- search-exclude --> - Store Steam Games on Multiple Drives (Removed in [`2be3a4d`](https://github.com/fmhy/edit/commit/2be3a4df55256b89f0c51abc8e416b60b8606037))<!-- /search-exclude -->
+- eStories <!-- search-exclude --> - Audiobook Player (Removed in [`13a4e33`](https://github.com/fmhy/edit/commit/13a4e337b1e55f1a50db9388fc7e4e21ded41e80): small update)<!-- /search-exclude -->
+- Focus Launcher <!-- search-exclude --> - Minimalist / Clean Launcher (Removed in [`19b48c4`](https://github.com/fmhy/edit/commit/19b48c446b8b0be2d7f4ddca52b9256ad19ad93c))<!-- /search-exclude -->
+- ReLSPosed or LSPosed <!-- search-exclude --> - Module-Based Customization Framework (Removed in [`19b48c4`](https://github.com/fmhy/edit/commit/19b48c446b8b0be2d7f4ddca52b9256ad19ad93c))<!-- /search-exclude -->
+- XKit <!-- search-exclude --> - Tumblr Enhancement Extension (Removed in [`428c38a`](https://github.com/fmhy/edit/commit/428c38a1f45938c7b38c85a5e5d6d33e170c32ad))<!-- /search-exclude -->
+- Ascent <!-- search-exclude --> - App Blocker (Removed in [`428c38a`](https://github.com/fmhy/edit/commit/428c38a1f45938c7b38c85a5e5d6d33e170c32ad))<!-- /search-exclude -->
+- Tradle <!-- search-exclude --> - Guess Countries by their Exports (Removed in [`96b993a`](https://github.com/fmhy/edit/commit/96b993a8c4a3f13cdd7fec12193fa9a35f4ee7ea): small fixes)<!-- /search-exclude -->
+- travle <!-- search-exclude --> - Guess Countries Between Two Locations (Removed in [`96b993a`](https://github.com/fmhy/edit/commit/96b993a8c4a3f13cdd7fec12193fa9a35f4ee7ea): small fixes)<!-- /search-exclude -->
+- Dreamily <!-- search-exclude --> - Story Writing AI (Removed in [`25470ce`](https://github.com/fmhy/edit/commit/25470ce01574631c39da0eac51baf144e89cbbd4))<!-- /search-exclude -->
+- **Goldberg** <!-- search-exclude --> - Steam Multiplayer Client Emulator (Removed in [`25470ce`](https://github.com/fmhy/edit/commit/25470ce01574631c39da0eac51baf144e89cbbd4))<!-- /search-exclude -->
+- 🌐 **Free-Certifications** <!-- search-exclude --> - Free Certifications / Courses Index (Removed in [`82d2d89`](https://github.com/fmhy/edit/commit/82d2d89b9dc0016ed27d5684b695a4191cdc4c28))<!-- /search-exclude -->
+- AnimeYY <!-- search-exclude --> - Sub / Dub (Removed in [`82d2d89`](https://github.com/fmhy/edit/commit/82d2d89b9dc0016ed27d5684b695a4191cdc4c28))<!-- /search-exclude -->

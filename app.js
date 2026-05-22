@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoader();
         try {
             // Append ajax parameter
-            const urlObj = new URL(url, window.location.origin);
+            const urlObj = new URL(url, window.location.href);
             urlObj.searchParams.set('ajax', '1');
             
             const response = await fetch(urlObj.toString());
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 contentArea.scrollTop = 0;
                 
                 // Scroll to target hash if present in URL
-                const urlObjForHash = new URL(url, window.location.origin);
+                const urlObjForHash = new URL(url, window.location.href);
                 const hash = urlObjForHash.hash;
                 if (hash) {
                     setTimeout(() => {
@@ -102,7 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update URL
             if (pushState) {
-                window.history.pushState({}, '', url);
+                const resolvedUrl = new URL(url, window.location.href).toString();
+                window.history.pushState({}, '', resolvedUrl);
             }
             
             // Highlight active sidebar item
@@ -124,11 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const updateActiveSidebarItem = (url) => {
-        const urlObj = new URL(url, window.location.origin);
+        const urlObj = new URL(url, window.location.href);
         const pageParam = urlObj.searchParams.get('page') || '';
         
         document.querySelectorAll('.sidebar-link').forEach(link => {
-            const linkUrl = new URL(link.getAttribute('href'), window.location.origin);
+            const linkUrl = new URL(link.getAttribute('href'), window.location.href);
             const linkPageParam = linkUrl.searchParams.get('page') || '';
             
             if (pageParam === linkPageParam) {

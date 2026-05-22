@@ -444,44 +444,49 @@ foreach ($categories as $cat) {
     }
 }
 
-// 4. Import custom/text pages
-$pages = [
-    [
-        'title' => 'Beginners Guide',
-        'slug' => 'beginners-guide',
-        'file' => 'beginners-guide.md'
-    ],
-    [
-        'title' => 'FAQ',
-        'slug' => 'faq',
-        'file' => 'other/FAQ.md'
-    ],
-    [
-        'title' => 'Backups',
-        'slug' => 'backups',
-        'file' => 'other/backups.md'
-    ],
-    [
-        'title' => 'Selfhosting',
-        'slug' => 'selfhosting',
-        'file' => 'other/selfhosting.md'
-    ],
-    [
-        'title' => 'Wallpapers',
-        'slug' => 'wallpapers',
-        'file' => 'other/wallpapers.md'
-    ],
-    [
-        'title' => 'Contribute',
-        'slug' => 'contributing',
-        'file' => 'other/contributing.md'
-    ],
-    [
-        'title' => 'Feedback',
-        'slug' => 'feedback',
-        'file' => 'feedback.md'
-    ]
-];
+// 4. Import custom/text pages dynamically
+$pages = [];
+$category_files = array_map('strtolower', array_column($categories, 'file'));
+$ignore_files = ['index.md', 'posts.md', 'sandbox.md', 'startpage.md'];
+
+// Scan docs/ root
+$docs_root_files = glob($docs_dir . '/*.md');
+if ($docs_root_files) {
+    foreach ($docs_root_files as $file_path) {
+        $filename = basename($file_path);
+        if (in_array(strtolower($filename), $category_files) || in_array(strtolower($filename), $ignore_files)) {
+            continue;
+        }
+        $pages[] = [
+            'slug' => strtolower(basename($filename, '.md')),
+            'file' => $filename
+        ];
+    }
+}
+
+// Scan docs/other/
+$docs_other_files = glob($docs_dir . '/other/*.md');
+if ($docs_other_files) {
+    foreach ($docs_other_files as $file_path) {
+        $filename = basename($file_path);
+        $pages[] = [
+            'slug' => strtolower(basename($filename, '.md')),
+            'file' => 'other/' . $filename
+        ];
+    }
+}
+
+// Scan docs/posts/
+$docs_posts_files = glob($docs_dir . '/posts/*.md');
+if ($docs_posts_files) {
+    foreach ($docs_posts_files as $file_path) {
+        $filename = basename($file_path);
+        $pages[] = [
+            'slug' => strtolower(basename($filename, '.md')),
+            'file' => 'posts/' . $filename
+        ];
+    }
+}
 
 $page_stmt = $pdo->prepare("INSERT INTO pages (title, slug, content) VALUES (?, ?, ?)");
 $total_pages = 0;
@@ -493,17 +498,46 @@ foreach ($pages as $p) {
         continue;
     }
     
-    echo "[*] Importing Page: {$p['title']}...\n";
     $content = file_get_contents($file_path);
+    
+    // Extract title from YAML frontmatter if present
+    $title = '';
+    if (preg_match('/^---\s*\n(.*?)\n---\s*/s', $content, $frontmatter_m)) {
+        $frontmatter = $frontmatter_m[1];
+        if (preg_match('/^title:\s*(.*)$/m', $frontmatter, $title_m)) {
+            $title = trim($title_m[1]);
+            $title = trim($title, '"\'');
+        }
+    }
+    
+    // Fallback: title from filename
+    if (empty($title)) {
+        $base = basename($p['file'], '.md');
+        $title = preg_replace('/(?<!^)(?=[A-Z])/', ' ', $base);
+        $title = str_replace('-', ' ', $title);
+        $title = ucwords($title);
+    }
+    
     // Strip YAML frontmatter if present
     $content = preg_replace('/^---\s*$.*?^---\s*$/ms', '', $content);
     
-    $page_stmt->execute([
-        $p['title'],
-        $p['slug'],
-        trim($content)
-    ]);
-    $total_pages++;
+    // Specific override: Contributing slug title should be 'Contribute'
+    if ($p['slug'] === 'contributing') {
+        $title = 'Contribute';
+    }
+    
+    echo "[*] Importing Page: {$title} (slug: {$p['slug']})...\n";
+    
+    try {
+        $page_stmt->execute([
+            $title,
+            $p['slug'],
+            trim($content)
+        ]);
+        $total_pages++;
+    } catch (PDOException $e) {
+        echo "[!] Warning: Failed to import page {$title} (slug: {$p['slug']}). Reason: " . $e->getMessage() . "\n";
+    }
 }
 
 echo "\n";

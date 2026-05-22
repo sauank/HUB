@@ -27,6 +27,25 @@ function slugify($text) {
     return $text;
 }
 
+function clean_anchor($anchor) {
+    if (empty($anchor)) return '';
+    // Strip wiki_ prefix if present
+    $anchor = preg_replace('/^wiki_/i', '', $anchor);
+    // Replace hex patterns like .25B7 or .2F with hyphens
+    $anchor = preg_replace('/\.[0-9A-Fa-f]+/i', '-', $anchor);
+    // Replace underscores with hyphens
+    $anchor = str_replace('_', '-', $anchor);
+    // Lowercase
+    $anchor = strtolower($anchor);
+    // Remove non-alphanumeric and non-hyphen characters
+    $anchor = preg_replace('/[^a-z0-9\-]/', '', $anchor);
+    // Clean up multiple hyphens
+    $anchor = preg_replace('/-+/', '-', $anchor);
+    // Trim hyphens
+    $anchor = trim($anchor, '-');
+    return $anchor;
+}
+
 // Helper to transform external wiki links (Reddit, FMHY.net, .md files) into local internal links
 function transform_wiki_url($url) {
     if (empty($url)) return '#';
@@ -37,75 +56,109 @@ function transform_wiki_url($url) {
         list($url, $anchor) = explode('#', $url, 2);
     }
     
+    // Clean the anchor using our robust clean_anchor function
+    if (!empty($anchor)) {
+        $anchor = clean_anchor($anchor);
+    }
+    
+    // Check if it's a relative anchor on the same page
+    if ($url === '') {
+        return !empty($anchor) ? '#' . $anchor : '#';
+    }
+    
     $is_wiki = false;
-    $slug = '';
+    $path = '';
     
     // 1. Match Reddit wiki paths
-    if (preg_match('~^https?://(?:www\.)?reddit\.com/r/FREEMEDIAHECKYEAH/wiki/([^/#?]+)/?$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
-        $is_wiki = true;
-    } elseif (preg_match('~^https?://(?:www\.)?reddit\.com/r/FREEMEDIAHECKYEAH/wiki/([^/#?]+)$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
+    if (preg_match('~^https?://(?:www\.)?reddit\.com/r/FREEMEDIAHECKYEAH/wiki(?:/(.*))?$~i', $url, $m)) {
+        $path = $m[1] ?? '';
         $is_wiki = true;
     }
     // 2. Match FMHY official website paths
-    elseif (preg_match('~^https?://(?:www\.)?fmhy\.net/([^/#?]+)/?$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
+    elseif (preg_match('~^https?://(?:www\.)?fmhy\.net(?:/(.*))?$~i', $url, $m)) {
+        $path = $m[1] ?? '';
         $is_wiki = true;
-    } elseif (preg_match('~^https?://(?:www\.)?fmhy\.net/([^/#?]+)$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
-        $is_wiki = true;
-    } elseif (preg_match('~^https?://fmhy\.pages\.dev/([^/#?]+)/?$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
-        $is_wiki = true;
-    } elseif (preg_match('~^https?://fmhy\.pages\.dev/([^/#?]+)$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
+    } elseif (preg_match('~^https?://fmhy\.pages\.dev(?:/(.*))?$~i', $url, $m)) {
+        $path = $m[1] ?? '';
         $is_wiki = true;
     }
-    // 3. Match relative markdown pages
-    elseif (preg_match('~^(?:\.\./|other/)?([^/#?]+)\.md$~i', $url, $m)) {
-        $slug = strtolower($m[1]);
+    // 3. Match root-relative paths (e.g. /privacy or /other/selfhosting)
+    elseif (preg_match('~^/(.*)$~', $url, $m) && !preg_match('~^//~', $url)) {
+        $path = $m[1];
+        $is_wiki = true;
+    }
+    // 4. Match local relative markdown files (excluding external URLs ending in .md)
+    elseif (preg_match('/\.md$/i', $url) && !preg_match('~^(?:https?:)?//~i', $url)) {
+        $path = $url;
         $is_wiki = true;
     }
     
     if ($is_wiki) {
-        // Known mappings from Reddit wiki/Vitepress paths to local database slugs
         $slug_map = [
             'adblock-vpn-privacy' => 'privacy',
             'android'             => 'mobile',
             'ios'                 => 'mobile',
             'torrent'             => 'torrenting',
             'contribute'          => 'contributing',
+            'contributing'        => 'contributing',
             'faq'                 => 'faq',
             'backups'             => 'backups',
             'selfhosting'         => 'selfhosting',
             'wallpapers'          => 'wallpapers',
             'beginners-guide'     => 'beginners-guide',
-            'feedback'            => 'feedback'
+            'feedback'            => 'feedback',
+            
+            // Additional mappings to align Reddit wiki / Vitepress / official paths
+            'games'               => 'gaming',
+            'gaming'              => 'gaming',
+            'edu'                 => 'educational',
+            'download'            => 'downloading',
+            'dev-tools'           => 'developer-tools',
+            'linux'               => 'linux-macos',
+            'social-media'        => 'social-media-tools',
+            'non-eng'             => 'non-english',
+            'audio-tools'         => 'audio'
         ];
         
-        if (isset($slug_map[$slug])) {
-            $slug = $slug_map[$slug];
+        // Extract the trailing slug from the path
+        $path = trim($path, '/');
+        $path = preg_replace('/\.md$/i', '', $path);
+        
+        if ($path === '') {
+            $slug = '';
+        } else {
+            $parts = explode('/', $path);
+            $slug = strtolower(end($parts));
         }
         
-        // Clean anchor hashes (e.g., #wiki_.25B7_firefox_tools -> #firefox-tools)
-        if (!empty($anchor)) {
-            $anchor = preg_replace('/^wiki_/i', '', $anchor);
-            $anchor = preg_replace('/^\.[0-9A-Fa-f]{4}_/', '', $anchor);
-            $anchor = str_replace('_', '-', $anchor);
-            $anchor = strtolower($anchor);
+        if ($slug !== '') {
+            if (isset($slug_map[$slug])) {
+                $slug = $slug_map[$slug];
+            }
+            
+            $new_url = "?page=" . $slug;
+            if (!empty($anchor)) {
+                $new_url .= "#" . $anchor;
+            }
+            return $new_url;
+        } else {
+            if (!empty($anchor)) {
+                return "index.php#" . $anchor;
+            }
+            return "index.php";
         }
-        
-        $new_url = "?page=" . $slug;
-        if (!empty($anchor)) {
-            $new_url .= "#" . $anchor;
-        }
-        return $new_url;
     }
     
-    // Return original url with hash restored if not matching a wiki page
+    // External link: restore original anchor if present (do not clean external anchors)
     if (!empty($anchor)) {
-        return $url . '#' . $anchor;
+        // Retrieve original anchor by parsing it from the original URL (since we cleaned it above)
+        $orig_anchor = '';
+        if (strpos($url, '#') !== false) {
+            list($url, $orig_anchor) = explode('#', $url, 2);
+        } else {
+            $orig_anchor = $anchor; // Fallback
+        }
+        return $url . '#' . $orig_anchor;
     }
     return $url;
 }
@@ -146,7 +199,12 @@ function parse_inline_markdown($text) {
         $parsed_name = parse_inline_markdown_inner($name);
         
         $placeholder = "LINKPLACEHOLDER" . count($links);
-        $links[$placeholder] = "<a href=\"{$url}\" target=\"_blank\" rel=\"noopener noreferrer\">{$parsed_name}</a>";
+        
+        // Internal page or anchor link should not open in a new tab
+        $is_internal = (strpos($url, '?page=') === 0 || strpos($url, 'index.php') === 0 || strpos($url, '#') === 0);
+        $target = $is_internal ? '' : ' target="_blank" rel="noopener noreferrer"';
+        
+        $links[$placeholder] = "<a href=\"{$url}\"{$target}>{$parsed_name}</a>";
         
         return $placeholder;
     }, $text);
@@ -467,8 +525,13 @@ if ($category) {
                 <div class="links-grid">
                     <?php foreach ($sec_links as $link): ?>
                         <div class="link-card">
+                            <?php 
+                            $transformed_url = transform_wiki_url($link['url']);
+                            $is_internal_link = (strpos($transformed_url, '?page=') === 0 || strpos($transformed_url, 'index.php') === 0 || strpos($transformed_url, '#') === 0);
+                            $target_attr = $is_internal_link ? '' : ' target="_blank" rel="noopener noreferrer"';
+                            ?>
                             <div class="link-title-container">
-                                <a href="<?= htmlspecialchars(transform_wiki_url($link['url'])) ?>" class="link-title-anchor" target="_blank" rel="noopener noreferrer">
+                                <a href="<?= htmlspecialchars($transformed_url) ?>" class="link-title-anchor"<?= $target_attr ?>>
                                     <?php if ($link['is_starred']): ?>
                                         <span class="badge-star">⭐</span>
                                     <?php endif; ?>

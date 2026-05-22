@@ -13,6 +13,7 @@ This project transforms the official VitePress markdown files into a responsive,
 - **🛠️ Self-Bootstrapping Database:** The backend automatically creates the required tables on the fly if the database is missing or empty.
 - **📂 Bulk Markdown Parser:** A command-line/browser-accessible PHP script (`import.php`) that parses standard VitePress markdown structure and inserts them into categories, sections, and links.
 - **🔓 Base64 Decoder Popups:** Support for decoding encoded URLs directly within the search and list interface.
+- **📁 Subdirectory Routing & Cache Buster:** Seamlessly runs inside local XAMPP subfolders (e.g. `/HUB/`) by using URL-relative SPA routing and automatic PHP `filemtime()` script/style versioning to prevent browser cache issues.
 
 ---
 

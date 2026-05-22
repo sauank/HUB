@@ -742,7 +742,7 @@ $sidebar_guides = [
     <link rel="shortcut icon" type="image/x-icon" href="public/favicon.ico">
     
     <!-- Style Sheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?= filemtime('style.css') ?>">
 </head>
 <body>
 
@@ -920,7 +920,7 @@ $sidebar_guides = [
     </div>
 
     <!-- Client-side Javascript application logic -->
-    <script src="app.js"></script>
+    <script src="app.js?v=<?= filemtime('app.js') ?>"></script>
     <script>
         // Additional hook for the footer decoder button
         document.getElementById('sidebar-footer-decode')?.addEventListener('click', () => {

@@ -84,7 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (contentArea) {
                 contentArea.innerHTML = html;
                 contentArea.scrollTop = 0;
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Scroll to target hash if present in URL
+                const urlObjForHash = new URL(url, window.location.origin);
+                const hash = urlObjForHash.hash;
+                if (hash) {
+                    setTimeout(() => {
+                        const targetElement = document.querySelector(hash);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
             }
             
             // Update URL
@@ -131,15 +144,24 @@ document.addEventListener('DOMContentLoaded', () => {
         navigateTo(window.location.href, false);
     });
 
-    // Intercept clicks on links for local navigation
+    // Intercept clicks on links
     document.addEventListener('click', (e) => {
         const anchor = e.target.closest('a');
         if (!anchor) return;
         
         const href = anchor.getAttribute('href');
+        if (!href) return;
         
-        // Only intercept internal links, e.g. starting with "index.php" or "?page="
-        if (href && (href.startsWith('index.php') || href.startsWith('?page='))) {
+        // 1. Handle Base64 encoded links globally (desc links, list cards, guides)
+        if (href.startsWith('base64:') || href.startsWith('Base64:')) {
+            e.preventDefault();
+            const clean = href.replace(/^(base64|Base64):?\s*/i, '');
+            showDecoder(clean);
+            return;
+        }
+        
+        // 2. Intercept internal links for AJAX SPA transitions
+        if (href.startsWith('index.php') || href.startsWith('?page=')) {
             e.preventDefault();
             navigateTo(href);
         }

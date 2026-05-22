@@ -27,6 +27,89 @@ function slugify($text) {
     return $text;
 }
 
+// Helper to transform external wiki links (Reddit, FMHY.net, .md files) into local internal links
+function transform_wiki_url($url) {
+    if (empty($url)) return '#';
+    
+    // Parse anchor hash if present
+    $anchor = '';
+    if (strpos($url, '#') !== false) {
+        list($url, $anchor) = explode('#', $url, 2);
+    }
+    
+    $is_wiki = false;
+    $slug = '';
+    
+    // 1. Match Reddit wiki paths
+    if (preg_match('~^https?://(?:www\.)?reddit\.com/r/FREEMEDIAHECKYEAH/wiki/([^/#?]+)/?$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    } elseif (preg_match('~^https?://(?:www\.)?reddit\.com/r/FREEMEDIAHECKYEAH/wiki/([^/#?]+)$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    }
+    // 2. Match FMHY official website paths
+    elseif (preg_match('~^https?://(?:www\.)?fmhy\.net/([^/#?]+)/?$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    } elseif (preg_match('~^https?://(?:www\.)?fmhy\.net/([^/#?]+)$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    } elseif (preg_match('~^https?://fmhy\.pages\.dev/([^/#?]+)/?$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    } elseif (preg_match('~^https?://fmhy\.pages\.dev/([^/#?]+)$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    }
+    // 3. Match relative markdown pages
+    elseif (preg_match('~^(?:\.\./|other/)?([^/#?]+)\.md$~i', $url, $m)) {
+        $slug = strtolower($m[1]);
+        $is_wiki = true;
+    }
+    
+    if ($is_wiki) {
+        // Known mappings from Reddit wiki/Vitepress paths to local database slugs
+        $slug_map = [
+            'adblock-vpn-privacy' => 'privacy',
+            'android'             => 'mobile',
+            'ios'                 => 'mobile',
+            'torrent'             => 'torrenting',
+            'contribute'          => 'contributing',
+            'faq'                 => 'faq',
+            'backups'             => 'backups',
+            'selfhosting'         => 'selfhosting',
+            'wallpapers'          => 'wallpapers',
+            'beginners-guide'     => 'beginners-guide',
+            'feedback'            => 'feedback'
+        ];
+        
+        if (isset($slug_map[$slug])) {
+            $slug = $slug_map[$slug];
+        }
+        
+        // Clean anchor hashes (e.g., #wiki_.25B7_firefox_tools -> #firefox-tools)
+        if (!empty($anchor)) {
+            $anchor = preg_replace('/^wiki_/i', '', $anchor);
+            $anchor = preg_replace('/^\.[0-9A-Fa-f]{4}_/', '', $anchor);
+            $anchor = str_replace('_', '-', $anchor);
+            $anchor = strtolower($anchor);
+        }
+        
+        $new_url = "?page=" . $slug;
+        if (!empty($anchor)) {
+            $new_url .= "#" . $anchor;
+        }
+        return $new_url;
+    }
+    
+    // Return original url with hash restored if not matching a wiki page
+    if (!empty($anchor)) {
+        return $url . '#' . $anchor;
+    }
+    return $url;
+}
+
 // 3. Inline markdown helper for inner formatting (bold, italics, inline code)
 function parse_inline_markdown_inner($text) {
     // Inline code: `code`
@@ -54,6 +137,9 @@ function parse_inline_markdown($text) {
     $text = preg_replace_callback('/\[([^\]]+)\]\(([^)]+)\)/', function($m) use (&$links) {
         $name = $m[1];
         $url = htmlspecialchars_decode($m[2]);
+        
+        // Transform the wiki URL before rendering
+        $url = transform_wiki_url($url);
         $url = htmlspecialchars($url, ENT_QUOTES, 'UTF-8');
         
         // Recursively parse inline markdown for the link text itself (e.g. bold/italics inside the link name)
@@ -382,7 +468,7 @@ if ($category) {
                     <?php foreach ($sec_links as $link): ?>
                         <div class="link-card">
                             <div class="link-title-container">
-                                <a href="<?= htmlspecialchars($link['url']) ?>" class="link-title-anchor" target="_blank" rel="noopener noreferrer">
+                                <a href="<?= htmlspecialchars(transform_wiki_url($link['url'])) ?>" class="link-title-anchor" target="_blank" rel="noopener noreferrer">
                                     <?php if ($link['is_starred']): ?>
                                         <span class="badge-star">⭐</span>
                                     <?php endif; ?>
